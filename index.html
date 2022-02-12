@@ -34,8 +34,8 @@ blah, blah, blah, blah
 
 
 <script>
-        var allergy_count = 0;  //counter to measure allergy clicks
-        var cold_count = 0;  //counter to measure cold clicks
+        var multiple_count = 0;  //counter to measure MS clicks
+        var fibro_count = 0;  //counter to measure fibromyalgia clicks
 	var docMod = document.lastModified;
         alert("This file last modified  " + docMod);
         console.log("This file last modified  " + docMod);
@@ -45,19 +45,19 @@ blah, blah, blah, blah
 
 	function percentages(){
 		var resultText = document.getElementById("results");  //used to return the results
-		var allergyPercent = (allergy_count/4)*100  //converts the allergy count into a percentage
-		var coldPercent = (cold_count/4)*100  //converts the cold count into a percentage
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"  /*when referenced, it
+		var multiplePercent = (multiple_count/4)*100  //converts the MS count into a percentage
+		var fibroPercent = (fibro_count/4)*100  //converts the fibromyalgia count into a percentage
+		resultText.innerHTML = "Probability it is multiple sclerosis =" + multiplePercent + "%" + "<br> Probability it is a fibromyalgia =" + fibroPercent + "%"  /*when referenced, it
 		prints the statement and substitutes percent variables */
 	}
 		
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;  //function that adds 1 to the allergy count value when called on
+        function multipleAdd(){
+            multiple_count = multiple_count + 1;  //function that adds 1 to the MS count value when called on
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;  //function that adds 1 to the cold count value when callled on
+        function fibroAdd(){
+            fibro_count = fibro_count + 1;  //function that adds 1 to the fibromyalgia count value when callled on
         }
 
   </script>
@@ -93,11 +93,11 @@ blah, blah, blah, blah
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Multiple Sclerosis or Fibromyalgia?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have a fibromyalgia but wonder if it is multiple sclerosis. Answer a few short questions to find out!</p>
 	<img src="http://creakyjoints.org//wp-content/uploads/0819_Multiple_Sclerosis_vs_Fibromyalgia.jpg" alt="Multiple Sclerosis vs Fibromyalgia">
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>  <!-- directs to page one once button is pressed -->
@@ -112,9 +112,9 @@ blah, blah, blah, blah
 	</div>
 	
     	<div id="content" class="w3-container">
-	<p>Are your eyes watery or itchy?</p>   <!-- prints the question to the user -->
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  <!-- when clicked, adds to the allergy count and then directs to next page --> 
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>  <!-- when clicked, adds to the cold count and then directs to next page --> 
+	<p>Do you have trouble with coordination or balance?</p>   <!-- prints the question to the user -->
+	<a href="#two"  onclick="multipleAdd();" class="w3-btn w3-black"> Yes</a>  <!-- when clicked, adds to the MS count and then directs to next page --> 
+        <a href="#two"  onclick="fibroAdd();" class="w3-btn w3-black">No</a>  <!-- when clicked, adds to the fibromyalgia count and then directs to next page --> 
 	</div><!-- /content -->
 
 </div>
@@ -125,9 +125,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p>  <!-- prints the question to the user -->
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>  <!-- when clicked, adds to the cold count and then directs to next page --> 
-        <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>  <!-- when clicked, adds to the allergy count and then directs to next page --> 
+	<p>Are you experiencing fatigue or exhaustion?</p>  <!-- prints the question to the user -->
+	<a href="#three"  onclick="fibroAdd();" class="w3-btn w3-black"> Yes</a>  <!-- when clicked, adds to the fibro count and then directs to next page --> 
+        <a href="#three"  onclick="multipleAdd();" class="w3-btn w3-black">No</a>  <!-- when clicked, adds to the MS count and then directs to next page --> 
 	</div><!-- /content -->
 	
 </div>
@@ -138,9 +138,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>  <!-- prints the question to the user -->    
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>  <!-- when clicked, adds to the cold count and then directs to next page --> 
-        <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>  <!-- when clicked, adds to the allergy count and then directs to next page --> 
+	<p>Do you notice a decrease in attention span and memory capacity?</p>  <!-- prints the question to the user -->    
+	<a href="#four"  onclick="fibroAdd();" class="w3-btn w3-black"> Yes</a>  <!-- when clicked, adds to the fibromyalgia count and then directs to next page --> 
+        <a href="#four"  onclick="multipleAdd();" class="w3-btn w3-black">No</a>  <!-- when clicked, adds to the MS count and then directs to next page --> 
 	</div><!-- /content -->
 	
 </div>	
@@ -151,9 +151,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p>  <!-- prints the question to the user -->    
-	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>  <!-- when clicked, adds to the allergy count and then directs to next page --> 
-        <a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a>  <!-- when clicked, adds to the cold count and then directs to next page --> 
+	<p>Do you have vision difficulties?</p>  <!-- prints the question to the user -->    
+	<a href="#results"  onclick="multipleAdd();" class="w3-btn w3-black"> Yes</a>  <!-- when clicked, adds to the MS count and then directs to next page --> 
+        <a href="#results"  onclick="fibroAdd();" class="w3-btn w3-black">No</a>  <!-- when clicked, adds to the fibromyalgia count and then directs to next page --> 
 	</div><!-- /content -->
 	
 </div>	
